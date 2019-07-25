@@ -62,16 +62,16 @@ const useStyles = makeStyles(theme => ({
   },
   list:{
     margin:'4px',
-    borderStyle:'solid',
-    borderWidth:'1px',
-    fontWeight:'400'
+    borderBottomStyle:'solid',
+    borderWidth:'0.3px',
+    fontWeight:'300'
 
   },
   gridme:{
     flexGrow: 1,
   },
   completedTasks:{
-      width:'50vw'
+      width:'40vw'
   }
 }));
 
@@ -95,7 +95,7 @@ function SimpleContainer() {
           return {
             doList,
             doneList,
-            item: "",
+            item: ""
           };
         })
 
@@ -138,8 +138,10 @@ function SimpleContainer() {
 
 
     let Donelist;
+    let message;
        if(state.doneList)
        { 
+         message=null;
         Donelist= state.doneList.map(item=>{
 
           return   <ListItem key={item} className={classes.list}>
@@ -152,6 +154,7 @@ function SimpleContainer() {
        }
        else{
          Donelist=null;
+         message=<DeleteForeverOutlinedIcon className={classes.icon}/>
        }
   
 
@@ -202,7 +205,7 @@ function SimpleContainer() {
            
            <Card className={classes.card1}>
           <h2> Completed Tasks </h2>
-        {Donelist}
+        {Donelist} {message}
           </Card>
         </Grid>
 </Grid>
