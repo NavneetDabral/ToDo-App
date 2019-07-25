@@ -10,10 +10,12 @@ const useStyles = makeStyles(theme => ({
     paddingTop:"1vh",
     fontSize:"4vh",
     color:"white",
-    backgroundColor:"#880E4F"
+    backgroundColor:"#4A148C",
+    boxShadow: "0 8px 6px -6px #E1BEE7"
   },
   icon:{
     fontSize:50,
+    color:"#F3E5F5"
 
   }
 }));
