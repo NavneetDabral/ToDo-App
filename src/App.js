@@ -179,7 +179,7 @@ function SimpleContainer() {
 
 <TextField
         id="outlined-email-input"
-        label="Item Name"
+        label="Task"
         type="text"
         autoComplete="off"
         className={classes.textField}
@@ -190,7 +190,7 @@ function SimpleContainer() {
         onChange={handleChange}
       />
       <Button variant="outlined" type="submit" color="secondary" className={classes.button}>
-        Add Item
+        Add task
       </Button>
          </form>
       </Paper>
