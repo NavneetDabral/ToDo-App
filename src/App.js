@@ -3,7 +3,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import ListItem from '@material-ui/core/ListItem';
 import Card from '@material-ui/core/Card';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -14,12 +13,7 @@ import Grid from '@material-ui/core/Grid';
 import DeleteForeverOutlinedIcon from '@material-ui/icons/DeleteForeverOutlined';
 const useStyles = makeStyles(theme => ({
   card: {
-    paddingLeft:'5vw',
-    paddingRight:'5vw',
-    paddingBottom:'5vw',
-    backgroundColor:'#FFFFFF',
-    marginLeft:'3vw',
-    marginRight:'3vw',
+    marginTop:'4vh',
     textAlign:'center'
   },
   card1: {
@@ -27,8 +21,8 @@ const useStyles = makeStyles(theme => ({
     paddingRight:'5vw',
     paddingBottom:'5vw',
     backgroundColor:'#FFFFFF',
-    marginLeft:'10vw',
-    marginRight:'10vw',
+    marginLeft:'5vw',
+    marginRight:'5vw',
     textAlign:'center'
   },
   root: {
@@ -71,7 +65,8 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
   },
   completedTasks:{
-      width:'40vw'
+      width:'40vw',
+      margin: theme.spacing(4),
   }
 }));
 
@@ -173,8 +168,8 @@ function SimpleContainer() {
    <div className={classes.gridme}>
         <Grid container spacing={3}>
 
-        <Grid item xs={12} sm={6}>
-        <Paper className={classes.root}>
+        <Grid item xs={12} sm={6} className={classes.card}>
+        
       <form  className={classes.container}  onSubmit={addItem} noValidate autoComplete="off">
 
 <TextField
@@ -193,10 +188,10 @@ function SimpleContainer() {
         Add task
       </Button>
          </form>
-      </Paper>
+    
         </Grid>
         <Grid item  xs={12} sm={6}>
-          <Card className={classes.card}>
+          <Card className={classes.card1}>
           <h2> Tasks ToDO </h2>
         {list}
           </Card>
