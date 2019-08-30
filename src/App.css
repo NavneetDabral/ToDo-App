@@ -1,5 +1,6 @@
 .body{
   background-color: antiquewhite;
+  overflow-y:hidden;
 }
 
 .App-logo {
