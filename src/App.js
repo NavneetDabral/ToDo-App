@@ -158,7 +158,7 @@ function SimpleContainer() {
     return(
 
     
-     
+     <div>
       
         <Typography component="div"  variant='h6' align='center'  style={{ height: '13vh'}} gutterBottom >
 <TopHeader></TopHeader>
@@ -206,7 +206,7 @@ function SimpleContainer() {
 </Grid>
 
 </div>
-    
+    </div>
   
       )
 
