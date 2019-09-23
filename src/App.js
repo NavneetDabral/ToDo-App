@@ -157,8 +157,8 @@ function SimpleContainer() {
 
     return(
 
-      <React.Fragment>
-      <CssBaseline />
+    
+     
       
         <Typography component="div"  variant='h6' align='center'  style={{ height: '13vh'}} gutterBottom >
 <TopHeader></TopHeader>
@@ -206,7 +206,6 @@ function SimpleContainer() {
 </Grid>
 
 </div>
-</React.Fragment>
     
   
       )
